@@ -1,4 +1,4 @@
-# Tooltips
+# Tooltips 【[中文版](README_cn.md)】
 
 This repository is the knowledge base about  opensource tools used by dteam. These tips records our experiences and leasons learned from real projects. 
 
