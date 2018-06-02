@@ -1,4 +1,4 @@
-# Grails
+# Grails实践
 
 在微服务如此流行的今天，我们使用Grails来构建后台服务。下面的这些技巧都针对与rest-api项目而言。
 
@@ -53,6 +53,20 @@
 ~~~
 - 在Domain中使用java8 datetime类型。
 - 打开“showSql”和“formatSql”来调试Hibernate产生的sql。
+- 避免使用双向关联。
+- 不要使用hasMany，对于many-to-many，使用3个Domain Class：
+  - Domain A
+  - Domain B
+  - Domain AB，它包含A和B的引用。
+- 对于大Domain：dynamicUpdate true
+- 若dynamicUpdate = true，对于beforeValidate中更新的列，使用dirty。
+- 对于用作日志的Domain，不要使用关联。
+- 不要滥用validator，复杂的验证逻辑放入Service中。
+
+## Controller
+
+- 不要调用Domain的持久化方法，使用Service。
+
 
 ## 测试
 
